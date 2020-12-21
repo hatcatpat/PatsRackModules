@@ -1,0 +1,29 @@
+{
+  "slug": "pat",
+  "name": "pat",
+  "version": "1.0.0",
+  "license": "proprietary",
+  "brand": "pat",
+  "author": "Pat Caulfield",
+  "authorEmail": "",
+  "authorUrl": "",
+  "pluginUrl": "",
+  "manualUrl": "",
+  "sourceUrl": "",
+  "donateUrl": "",
+  "changelogUrl": "",
+  "modules": [
+    {
+      "slug": "Tom",
+      "name": "Tom",
+      "description": "A weird clock divider, based on the tmh.rate MaxMSP patch by Tom Hall",
+      "tags": []
+    },
+    {
+      "slug": "Chance",
+      "name": "Chance",
+      "description": "Allow a gate to pass to an output based on chance",
+      "tags": []
+    }
+  ]
+}
