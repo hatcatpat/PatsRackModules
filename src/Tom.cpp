@@ -111,6 +111,11 @@ struct TomSlider : SvgWidget
 
 		const auto c = nvgRGB(100,100,100);
 
+		nvgStrokeColor(args.vg, nvgRGB(230,230,230) );
+		nvgBeginPath(args.vg);
+		nvgRect(args.vg, 0, 0, box.size.x, box.size.y);
+		nvgFill(args.vg);
+
 		nvgFillColor(args.vg, c);
 		nvgBeginPath(args.vg);
 		nvgRect(args.vg, box.size.x * (1 - 0.05) * module->pos[id], 0, box.size.x * 0.05, box.size.y);

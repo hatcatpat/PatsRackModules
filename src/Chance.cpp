@@ -27,8 +27,11 @@ struct Chance : Module
 		OUTPUT4_OUTPUT,
 		NUM_OUTPUTS
 	};
-	enum LightIds
-	{
+	enum LightIds {
+		LIGHT3_LIGHT,
+		LIGHT2_LIGHT,
+		LIGHT4_LIGHT,
+		LIGHT1_LIGHT,
 		NUM_LIGHTS
 	};
 
@@ -56,6 +59,10 @@ struct Chance : Module
 			for (int i = 0; i < 4; ++i)
 			{
 				open[i] = random::uniform() < params[i].getValue() * abs(inputs[i + 1].getNormalVoltage(10.0f)) / 10.0f ? 1 : 0;
+				if(open[i] == 1)
+					lights[i].setSmoothBrightness(1.0,0.1);
+				else
+					lights[i].setSmoothBrightness(0.0,0.1);
 			}
 		}
 
@@ -74,21 +81,26 @@ struct ChanceWidget : ModuleWidget
 		setModule(module);
 		setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/Chance.svg")));
 
-		addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(5.08, 20.078)), module, Chance::INPUT1_PARAM));
+		addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(5.08, 24.094)), module, Chance::INPUT1_PARAM));
 		addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(5.08, 48.187)), module, Chance::INPUT2_PARAM));
-		addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(5.08, 76.297)), module, Chance::INPUT3_PARAM));
-		addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(5.08, 104.406)), module, Chance::INPUT4_PARAM));
+		addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(5.08, 72.281)), module, Chance::INPUT3_PARAM));
+		addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(5.08, 96.375)), module, Chance::INPUT4_PARAM));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 12.047)), module, Chance::GATE_INPUT));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 20.078)), module, Chance::CV_1_INPUT));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 48.187)), module, Chance::CV_2_INPUT));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 76.297)), module, Chance::CV_3_INPUT));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(15.24, 104.406)), module, Chance::CV_4_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.966, 12.047)), module, Chance::GATE_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.966, 24.094)), module, Chance::CV_1_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.966, 48.187)), module, Chance::CV_2_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.966, 72.281)), module, Chance::CV_3_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(22.966, 96.375)), module, Chance::CV_4_INPUT));
 
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 32.125)), module, Chance::OUTPUT1_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 60.234)), module, Chance::OUTPUT2_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 88.344)), module, Chance::OUTPUT3_OUTPUT));
-		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(15.24, 116.453)), module, Chance::OUTPUT4_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.966, 36.141)), module, Chance::OUTPUT1_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.966, 60.234)), module, Chance::OUTPUT2_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.966, 84.328)), module, Chance::OUTPUT3_OUTPUT));
+		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.966, 108.422)), module, Chance::OUTPUT4_OUTPUT));
+
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(5.644, 117.511)), module, Chance::LIGHT3_LIGHT));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(12.041, 117.511)), module, Chance::LIGHT2_LIGHT));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(18.439, 117.511)), module, Chance::LIGHT4_LIGHT));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(24.836, 117.511)), module, Chance::LIGHT1_LIGHT));
 	}
 };
 
