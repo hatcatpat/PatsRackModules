@@ -46,14 +46,24 @@ struct Chance : Module
 
 	void process(const ProcessArgs &args) override
 	{
-		
-		if (trigger.process(rescale(inputs[GATE_INPUT].getVoltage(), 0.1f, 2.0f, 0.0f, 1.0f)))
-		{
-			for(int i = 0; i < 4; ++i){
+		if (!inputs[GATE_INPUT].isConnected())
+			return;
 
+		const float v = inputs[GATE_INPUT].getVoltage();
+
+		if (trigger.process(rescale(v, 0.1f, 2.0f, 0.0f, 1.0f)))
+		{
+			for (int i = 0; i < 4; ++i)
+			{
+				open[i] = random::uniform() < params[i].getValue() * abs(inputs[i + 1].getNormalVoltage(10.0f)) / 10.0f ? 1 : 0;
 			}
 		}
 
+		for (int i = 0; i < 4; ++i)
+		{
+			if (outputs[i].isConnected())
+				outputs[i].setVoltage(v * open[i]);
+		}
 	}
 };
 
