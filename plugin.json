@@ -24,6 +24,12 @@
       "name": "Chance",
       "description": "Allow a gate to pass to an output based on chance",
       "tags": []
+    },
+    {
+      "slug": "Renick",
+      "name": "Renick",
+      "description": "An L-System based Clock divider",
+      "tags": []
     }
   ]
 }

@@ -9,6 +9,7 @@ void init(Plugin* p) {
 	
 	p->addModel(modelTom);
 	p->addModel(modelChance);
+	p->addModel(modelRenick);
 	// Add modules here
 	// p->addModel(modelMyModule);
 
