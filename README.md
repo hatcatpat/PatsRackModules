@@ -1,10 +1,17 @@
 # pat's rack modules
 a set of modules i have created for vcv rack :^)
 
-# chance
+## installing
+
+for windows:
+  place the *contents* of dist/pat-VERSION-win.zip into your plugins-v1 folder (located in Documents/Rack/plugins-v1)
+
+## modules
+
+### chance
 takes a gate input, and has a chance to pass the input to any of its four outputs. the probability is independant, and can be multiplied by an incoming cv signal (0 to 10 volts).
 
-# renick
+### renick
 a simple l-system module. it has four symbols, a,b,c,d, each of which have a corresponding duration in ms. there is also a user defined rule attached to each symbol. 
 
 a basic example of an l-system would be:
@@ -16,8 +23,8 @@ a basic example of an l-system would be:
   
 each symbol is then interpreted as an ammount of time to wait before triggering an output.
 
-# hold me
+### hold me
 a sample-hold and/or range-mapper. it takes an input signal, and an input range [min,max], and maps it to an output range [start,end]. optionally, you can enable "gate?" to make the output wait for a gate input before updating its value.
 
-# polyamory
+### polyamory
 takes 4 inputs (or more, if you put a poly cable into input a), and distrubutes them evenly over the range [0,1]. it then adjusts the volume of each input according to its distance to the center and width, and outputs the sum. the mul parameter allows for additional volume control.
