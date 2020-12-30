@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8.3564997mm"
+   height="8.3560028mm"
+   viewBox="0 0 8.3564999 8.3560031"
+   version="1.1"
+   id="svg15246"
+   sodipodi:docname="PJ301M_OUT.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <defs
+     id="defs15240">
+    <clipPath
+       id="clip89">
+      <rect
+         y="0"
+         x="0"
+         width="18"
+         height="19"
+         id="rect4864" />
+    </clipPath>
+    <clipPath
+       id="clip90">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 0.898438,0.128906 h 16.25 v 17.882813 h -16.25 z m 0,0"
+         id="path4861" />
+    </clipPath>
+    <mask
+       id="mask44">
+      <g
+         style="filter:url(#alpha)"
+         id="g4858"
+         transform="matrix(0.26458333,0,0,0.26458333,89.358789,128.57765)">
+        <rect
+           x="0"
+           y="0"
+           width="3052.8701"
+           height="3351.5"
+           style="fill:#000000;fill-opacity:0.149994;stroke:none"
+           id="rect4856" />
+      </g>
+    </mask>
+    <filter
+       id="alpha"
+       filterUnits="objectBoundingBox"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         type="matrix"
+         in="SourceGraphic"
+         values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+         id="feColorMatrix4149" />
+    </filter>
+    <clipPath
+       id="clipPath17821">
+      <rect
+         y="0"
+         x="0"
+         width="18"
+         height="19"
+         id="rect17819" />
+    </clipPath>
+    <clipPath
+       id="clipPath17825">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 0.898438,0.128906 h 16.25 v 17.882813 h -16.25 z m 0,0"
+         id="path17823" />
+    </clipPath>
+    <clipPath
+       id="clip87">
+      <rect
+         y="0"
+         x="0"
+         width="24"
+         height="26"
+         id="rect4848" />
+    </clipPath>
+    <clipPath
+       id="clip88">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 0.683594,0.921875 h 22.679687 v 24.9375 H 0.683594 Z m 0,0"
+         id="path4845" />
+    </clipPath>
+    <mask
+       id="mask43">
+      <g
+         style="filter:url(#alpha)"
+         id="g4842"
+         transform="matrix(0.26458333,0,0,0.26458333,89.358789,128.57765)">
+        <rect
+           x="0"
+           y="0"
+           width="3052.8701"
+           height="3351.5"
+           style="fill:#000000;fill-opacity:0.149994;stroke:none"
+           id="rect4840" />
+      </g>
+    </mask>
+    <filter
+       id="filter17836"
+       filterUnits="objectBoundingBox"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         type="matrix"
+         in="SourceGraphic"
+         values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+         id="feColorMatrix17834" />
+    </filter>
+    <clipPath
+       id="clipPath17840">
+      <rect
+         y="0"
+         x="0"
+         width="24"
+         height="26"
+         id="rect17838" />
+    </clipPath>
+    <clipPath
+       id="clipPath17844">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 0.683594,0.921875 h 22.679687 v 24.9375 H 0.683594 Z m 0,0"
+         id="path17842" />
+    </clipPath>
+    <clipPath
+       id="clip95">
+      <rect
+         y="0"
+         x="0"
+         width="18"
+         height="18"
+         id="rect4912" />
+    </clipPath>
+    <clipPath
+       id="clip96">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0.140625,0.140625 H 17.199219 V 17.199219 H 0.140625 Z m 0,0"
+         id="path4909" />
+    </clipPath>
+    <mask
+       id="mask47">
+      <g
+         style="filter:url(#alpha-3)"
+         id="g4906"
+         transform="matrix(0.26458333,0,0,0.26458333,88.611154,119.19859)">
+        <rect
+           x="0"
+           y="0"
+           width="3052.8701"
+           height="3351.5"
+           style="fill:#000000;fill-opacity:0.330002;stroke:none"
+           id="rect4904" />
+      </g>
+    </mask>
+    <filter
+       id="alpha-3"
+       filterUnits="objectBoundingBox"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         type="matrix"
+         in="SourceGraphic"
+         values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+         id="feColorMatrix4149-6" />
+    </filter>
+    <clipPath
+       id="clipPath18541">
+      <rect
+         y="0"
+         x="0"
+         width="18"
+         height="18"
+         id="rect18539" />
+    </clipPath>
+    <clipPath
+       id="clipPath18545">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0.140625,0.140625 H 17.199219 V 17.199219 H 0.140625 Z m 0,0"
+         id="path18543" />
+    </clipPath>
+    <clipPath
+       id="clip93">
+      <rect
+         y="0"
+         x="0"
+         width="22"
+         height="24"
+         id="rect4896" />
+    </clipPath>
+    <clipPath
+       id="clip94">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0.0390625,0.0390625 H 21.300781 V 23.421875 H 0.0390625 Z m 0,0"
+         id="path4893" />
+    </clipPath>
+    <mask
+       id="mask46">
+      <g
+         style="filter:url(#alpha-3)"
+         id="g4890"
+         transform="matrix(0.26458333,0,0,0.26458333,88.611154,119.19859)">
+        <rect
+           x="0"
+           y="0"
+           width="3052.8701"
+           height="3351.5"
+           style="fill:#000000;fill-opacity:0.149994;stroke:none"
+           id="rect4888" />
+      </g>
+    </mask>
+    <filter
+       id="filter18556"
+       filterUnits="objectBoundingBox"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         type="matrix"
+         in="SourceGraphic"
+         values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+         id="feColorMatrix18554" />
+    </filter>
+    <clipPath
+       id="clipPath18560">
+      <rect
+         y="0"
+         x="0"
+         width="22"
+         height="24"
+         id="rect18558" />
+    </clipPath>
+    <clipPath
+       id="clipPath18564">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0.0390625,0.0390625 H 21.300781 V 23.421875 H 0.0390625 Z m 0,0"
+         id="path18562" />
+    </clipPath>
+    <clipPath
+       id="clip91">
+      <rect
+         y="0"
+         x="0"
+         width="29"
+         height="32"
+         id="rect4880" />
+    </clipPath>
+    <clipPath
+       id="clip92">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0.507812,0.5 H 28.855469 V 31.679688 H 0.507812 Z m 0,0"
+         id="path4877" />
+    </clipPath>
+    <mask
+       id="mask45">
+      <g
+         style="filter:url(#alpha-3)"
+         id="g4874"
+         transform="matrix(0.26458333,0,0,0.26458333,88.611154,119.19859)">
+        <rect
+           x="0"
+           y="0"
+           width="3052.8701"
+           height="3351.5"
+           style="fill:#000000;fill-opacity:0.149994;stroke:none"
+           id="rect4872" />
+      </g>
+    </mask>
+    <filter
+       id="filter18575"
+       filterUnits="objectBoundingBox"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feColorMatrix
+         type="matrix"
+         in="SourceGraphic"
+         values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+         id="feColorMatrix18573" />
+    </filter>
+    <clipPath
+       id="clipPath18579">
+      <rect
+         y="0"
+         x="0"
+         width="29"
+         height="32"
+         id="rect18577" />
+    </clipPath>
+    <clipPath
+       id="clipPath18583">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0.507812,0.5 H 28.855469 V 31.679688 H 0.507812 Z m 0,0"
+         id="path18581" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.2"
+     inkscape:cx="10.759641"
+     inkscape:cy="17.866126"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1858"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata15243">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-74.416306,-97.613551)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path7751"
+       d="m 78.594001,105.86869 c -2.248594,-0.0145 -4.077939,-1.84457 -4.07683,-4.08047 0.0011,-2.235937 1.829348,-4.063815 4.07683,-4.073804 2.239696,0.01113 4.069044,1.83898 4.077941,4.073804 -0.0044,2.23702 -1.833795,4.06711 -4.07683,4.08047 z m 0,0"
+       style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:#636663;stroke-width:0.201728;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path7757"
+       d="m 75.564736,101.78822 c 0.0089,1.67999 1.350047,3.02197 3.029265,3.02977 1.672545,-0.006 3.025926,-1.35534 3.023702,-3.02977 -0.0011,-1.67 -1.353382,-3.017563 -3.023702,-3.022001 -1.676994,0.0064 -3.017032,1.344211 -3.029265,3.022001"
+       style="fill:#545454;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.284661" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path7759"
+       d="m 76.97706,101.79044 c 0.0044,0.89614 0.719504,1.61105 1.615829,1.61548 0.891874,-0.003 1.613606,-0.72268 1.612492,-1.61548 0,-0.8917 -0.721729,-1.60997 -1.612492,-1.61219 -0.894099,0.003 -1.609157,0.71713 -1.615829,1.61219"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.284661" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#2a2b2a;stroke-width:0.201728;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 76.290754,101.78973 c 0.0063,1.27717 1.025422,2.29604 2.302844,2.30236 1.271079,-0.005 2.299675,-1.02995 2.298087,-2.30236 0,-1.27082 -1.028591,-2.294488 -2.298087,-2.29765 -1.274249,0.0046 -2.293333,1.02205 -2.302844,2.29765"
+       id="path18715"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

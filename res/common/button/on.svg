@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="8.3559999mm"
+   height="8.3559999mm"
+   viewBox="0 0 8.3559999 8.3559999"
+   version="1.1"
+   id="svg933"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="on.svg">
+  <defs
+     id="defs927" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="15.048648"
+     inkscape:cx="10.221503"
+     inkscape:cy="14.470268"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:window-width="1858"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-center="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1496"
+       originx="4.178"
+       originy="4.178"
+       units="mm"
+       spacingx="0.52225"
+       spacingy="0.52225" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata930">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#000000;stroke-width:0.264583"
+       id="path1498"
+       cx="4.178"
+       cy="4.178"
+       r="4.178" />
+    <circle
+       style="fill:#e8617a;stroke-width:0.215676"
+       id="path1500"
+       cx="4.178"
+       cy="4.178"
+       r="2.98" />
+  </g>
+</svg>
