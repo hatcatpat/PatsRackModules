@@ -56,6 +56,49 @@ struct Polyamory : Module
 			if (inputs[A_INPUT].isPolyphonic())
 			{
 				// use A's inputs instead of b,c,d
+				std::vector<float> r;
+				r.assign(inputs[A_INPUT].getChannels(), 0.f);
+
+				float sum = 0.f;
+				for (size_t i = 0; i < r.size(); ++i)
+				{
+
+					const float x = (float)(i + 0.5f) / r.size();
+					const float d = abs(c - x);
+
+					if (d >= w)
+					{
+						r[i] = 0.f;
+					}
+					else
+					{
+						r[i] = w - d;
+					}
+
+					sum += r[i] * inputs[A_INPUT].getVoltage(i);
+				}
+
+				sum /= r.size();
+				sum *= m;
+				outputs[OUTPUT_OUTPUT].setVoltage(sum);
+
+				for (int i = 0; i < 4; ++i)
+				{
+					const float x = (float)(i + 0.5f) / 4.f;
+					const float d = abs(c - x);
+
+					if (d >= w)
+					{
+						r[i] = 0.f;
+					}
+					else
+					{
+						r[i] = w - d;
+					}
+
+					lights[i].setSmoothBrightness(r[i] * m, 0.01);
+				}
+
 				return;
 			}
 		}
