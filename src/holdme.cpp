@@ -1,13 +1,13 @@
 #include "plugin.hpp"
 
-#include "common.h"
+#include "common.hpp"
 
 struct Holdme : Module
 {
 	enum ParamIds
 	{
-		MIN_PARAM,
-		MAX_PARAM,
+		_MIN_PARAM,
+		_MAX_PARAM,
 		START_PARAM,
 		END_PARAM,
 		TOGGLE_PARAM,
@@ -16,8 +16,8 @@ struct Holdme : Module
 	};
 	enum InputIds
 	{
-		MIN_INPUT,
-		MAX_INPUT,
+		_MIN_INPUT,
+		_MAX_INPUT,
 		START_INPUT,
 		END_INPUT,
 		TOGGLE_INPUT,
@@ -42,8 +42,8 @@ struct Holdme : Module
 	Holdme()
 	{
 		config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
-		configParam(MIN_PARAM, -5.f, 10.f, 0.f, "Minimum value of the input");
-		configParam(MAX_PARAM, -5.f, 10.f, 10.f, "Maximum value of the input");
+		configParam(_MIN_PARAM, -5.f, 10.f, 0.f, "Minimum value of the input");
+		configParam(_MAX_PARAM, -5.f, 10.f, 10.f, "Maximum value of the input");
 		configParam(START_PARAM, -5.f, 10.f, 0.f, "Minimum value of the output");
 		configParam(END_PARAM, -5.f, 10.f, 10.f, "Maximum value of the output");
 		configParam(TOGGLE_PARAM, 0.f, 1.f, 0.f, "Toggles whether or not to sample+hold");
@@ -53,6 +53,7 @@ struct Holdme : Module
 	void process(const ProcessArgs &args) override
 	{
 
+		gating = params[TOGGLE_PARAM].getValue() > 0.5f;
 		if (inputs[TOGGLE_INPUT].isConnected())
 		{
 			if (toggle_trigger.process(rescale(inputs[TOGGLE_INPUT].getVoltage(), 0.1f, 2.f, 0.f, 1.f)))
@@ -61,31 +62,19 @@ struct Holdme : Module
 				params[TOGGLE_PARAM].setValue(gating ? 1.f : 0.f);
 			}
 		}
-		else
-		{
-			gating = params[TOGGLE_PARAM].getValue() > 0.5f;
-		}
 
 		if (inputs[INPUT_INPUT].isConnected())
 		{
 			if (gating)
 			{
-
+				bool should_sample = params[GATE_PARAM].getValue() > 0.5f;
 				if (inputs[GATE_INPUT].isConnected())
+					should_sample = should_sample || gate_trigger.process(rescale(inputs[GATE_INPUT].getVoltage(), 0.1f, 2.f, 0.f, 1.f));
+
+				if (should_sample)
 				{
-					if (gate_trigger.process(rescale(inputs[GATE_INPUT].getVoltage(), 0.1f, 2.f, 0.f, 1.f)))
-					{
-						outputs[OUTPUT_OUTPUT].setVoltage(mapRange());
-						last_output = outputs[OUTPUT_OUTPUT].getVoltage();
-					}
-				}
-				else
-				{
-					if (params[GATE_PARAM].getValue() > 0.5f)
-					{
-						outputs[OUTPUT_OUTPUT].setVoltage(mapRange());
-						last_output = outputs[OUTPUT_OUTPUT].getVoltage();
-					}
+					outputs[OUTPUT_OUTPUT].setVoltage(mapRange());
+					last_output = outputs[OUTPUT_OUTPUT].getVoltage();
 				}
 			}
 			else
@@ -98,8 +87,8 @@ struct Holdme : Module
 
 	float mapRange()
 	{
-		const float min_value = params[MIN_PARAM].getValue() * abs(inputs[MIN_INPUT].getNormalVoltage(10.f)) / 10.f;
-		const float max_value = params[MAX_PARAM].getValue() * abs(inputs[MAX_INPUT].getNormalVoltage(10.f)) / 10.f;
+		const float min_value = params[_MIN_PARAM].getValue() * abs(inputs[_MIN_INPUT].getNormalVoltage(10.f)) / 10.f;
+		const float max_value = params[_MAX_PARAM].getValue() * abs(inputs[_MAX_INPUT].getNormalVoltage(10.f)) / 10.f;
 		const float start_value = params[START_PARAM].getValue() * abs(inputs[START_INPUT].getNormalVoltage(10.f)) / 10.f;
 		const float end_value = params[END_PARAM].getValue() * abs(inputs[END_INPUT].getNormalVoltage(10.f)) / 10.f;
 
@@ -171,16 +160,16 @@ struct HoldmeWidget : ModuleWidget
 		setModule(module);
 		setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/holdme.svg")));
 
-		addParam(createParamCentered<Rogan1PPinkSmall>(mm2px(Vec(20.32, 24.094)), module, Holdme::MIN_PARAM));
-		addParam(createParamCentered<Rogan1PPinkSmall>(mm2px(Vec(20.32, 34.133)), module, Holdme::MAX_PARAM));
+		addParam(createParamCentered<Rogan1PPinkSmall>(mm2px(Vec(20.32, 24.094)), module, Holdme::_MIN_PARAM));
+		addParam(createParamCentered<Rogan1PPinkSmall>(mm2px(Vec(20.32, 34.133)), module, Holdme::_MAX_PARAM));
 		addParam(createParamCentered<Rogan1PPinkSmall>(mm2px(Vec(20.32, 44.172)), module, Holdme::START_PARAM));
 		addParam(createParamCentered<Rogan1PPinkSmall>(mm2px(Vec(20.32, 54.211)), module, Holdme::END_PARAM));
 
 		addParam(createParamCentered<PatSwitch>(mm2px(Vec(20.32, 70.273)), module, Holdme::TOGGLE_PARAM));
 		addParam(createParamCentered<PatButton>(mm2px(Vec(20.32, 80.312)), module, Holdme::GATE_PARAM));
 
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(30.48, 24.094)), module, Holdme::MIN_INPUT));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(30.48, 34.133)), module, Holdme::MAX_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(30.48, 24.094)), module, Holdme::_MIN_INPUT));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(30.48, 34.133)), module, Holdme::_MAX_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(30.48, 44.172)), module, Holdme::START_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(30.48, 54.211)), module, Holdme::END_INPUT));
 		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(30.48, 70.273)), module, Holdme::TOGGLE_INPUT));

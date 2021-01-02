@@ -23,11 +23,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
+     inkscape:zoom="3.8597152"
      inkscape:cx="-61.163598"
      inkscape:cy="88.425727"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      showgrid="true"
      inkscape:snap-page="false"
@@ -130,21 +130,22 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';fill:#e8617a;fill-opacity:1;stroke-width:0.264583"
          id="path882" />
     </g>
-    <circle
-       style="fill:#00ff00;stroke-width:0.4895"
-       id="path2113"
-       cx="-36.461998"
-       cy="16.224941"
-       r="4.178" />
-    <circle
-       style="fill:#ff0000;stroke-width:0.648898"
-       id="path2113-6"
-       cx="-37.641499"
-       cy="37.66354"
-       r="5.5384998" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="components" />
+     inkscape:label="components">
+    <circle
+       style="fill:#00ff00;stroke-width:0.4895"
+       id="path2113"
+       cx="-28.841997"
+       cy="2.1702719"
+       r="4.178" />
+    <circle
+       style="fill:#ff0000;stroke-width:0.648899"
+       id="path2113-6"
+       cx="-30.021498"
+       cy="23.60887"
+       r="5.5384998" />
+  </g>
 </svg>

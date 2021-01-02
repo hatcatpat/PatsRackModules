@@ -1,6 +1,6 @@
 #include "plugin.hpp"
 
-#include "common.h"
+#include "common.hpp"
 
 struct Polyamory : Module
 {

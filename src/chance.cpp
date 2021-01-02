@@ -1,5 +1,5 @@
 #include "plugin.hpp"
-#include "common.h"
+#include "common.hpp"
 
 struct Chance : Module
 {

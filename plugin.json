@@ -1,0 +1,53 @@
+{
+  "slug": "pat",
+  "name": "pat",
+  "version": "1.0.0",
+  "license": "proprietary",
+  "brand": "pat",
+  "author": "",
+  "authorEmail": "",
+  "authorUrl": "",
+  "pluginUrl": "",
+  "manualUrl": "",
+  "sourceUrl": "",
+  "donateUrl": "",
+  "changelogUrl": "",
+  "modules": [
+    {
+      "slug": "chance",
+      "name": "chance",
+      "description": "",
+      "tags": []
+    },
+    {
+      "slug": "renick",
+      "name": "renick",
+      "description": "",
+      "tags": []
+    },
+    {
+      "slug": "polyamory",
+      "name": "polyamory",
+      "description": "",
+      "tags": []
+    },
+    {
+      "slug": "timothy",
+      "name": "timothy",
+      "description": "",
+      "tags": []
+    },
+    {
+      "slug": "snap",
+      "name": "snap",
+      "description": "",
+      "tags": []
+    },
+    {
+      "slug": "holdme",
+      "name": "holdme",
+      "description": "",
+      "tags": []
+    }
+  ]
+}
