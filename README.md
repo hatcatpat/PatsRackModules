@@ -6,6 +6,18 @@ a set of modules i have created for vcv rack :^)
 for windows:
   place the *contents* of dist/pat-VERSION-win.zip into your plugins-v1 folder (located in Documents/Rack/plugins-v1)
 
+for linux:
+  place the *contents* of dist/pat-VERSION-lin.zip into your plugins-v1 folder (perhaps located in /home/NAME/.Rack/plugins-v1)
+  
+for mac:
+  read [this guide](https://vcvrack.com/manual/PluginDevelopmentTutorial) to figure out how to set up a build environment for plugins, then in a command line: 
+  - clone this repo
+  - move into the folder
+  - run "make clean"
+  - either:
+    - run "make dist" to compile it to a zip/folder, then put *contents* of the newly created dist/pat-VERSION-mac.zip into your plugins-v1 folder (Documents/Rack/plugins-v1)
+    - or, run "make install" to automatically put the plugin the your plugins folder
+
 ## modules
 
 ### chance
