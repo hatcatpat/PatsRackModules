@@ -68,6 +68,14 @@ struct Timothy : Module
 		configParam(MUL_4_PARAM, 0.f, 1.f, 0.f, "Multiplies BPM by 4");
 	}
 
+	float getBPS()
+	{
+		if (inputs[BPM_INPUT].isConnected())
+			return 60.f / rescale(abs(inputs[BPM_INPUT].getVoltage()), 0.f, 10.f, 1.f, 120.f * 16.f);
+		else
+			return 60.f / params[BPM_PARAM].getValue();
+	}
+
 	void process(const ProcessArgs &args) override
 	{
 
@@ -135,13 +143,13 @@ struct Timothy : Module
 		running = params[ON_PARAM].getValue() > 0.5;
 		if (running)
 		{
-			float b = params[BPM_PARAM].getValue() * abs(inputs[BPM_INPUT].getNormalVoltage(10.f)) / 10.f;
-			if (num_toggles != 0)
-				b *= mul;
-			dur = 60.f / b;
+			dur = getBPS();
 
 			if (outputs[BPM_OUTPUT].isConnected())
-				outputs[BPM_OUTPUT].setVoltage(rescale(b, 1.f, 120.f * 16.f, 0.f, 10.f));
+				outputs[BPM_OUTPUT].setVoltage(rescale(dur, 60.f / 120.f * 16.f, 60.f / 1.f, 0.f, 10.f));
+
+			if (num_toggles != 0)
+				dur /= mul;
 
 			const float r = 1.f / args.sampleRate;
 

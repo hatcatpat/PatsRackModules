@@ -12,6 +12,7 @@
         "xstring": "cpp",
         "xtree": "cpp",
         "string": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "xutility": "cpp"
     }
 }

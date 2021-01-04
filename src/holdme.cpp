@@ -95,7 +95,8 @@ struct Holdme : Module
 		if (max_value == min_value)
 			return 0.f;
 		else
-			return (inputs[INPUT_INPUT].getVoltage() - min_value) * (end_value - start_value) / (max_value - min_value) + start_value;
+			return rescale(inputs[INPUT_INPUT].getVoltage(), min_value, max_value, start_value, end_value);
+		// return (inputs[INPUT_INPUT].getVoltage() - min_value) * (end_value - start_value) / (max_value - min_value) + start_value;
 	}
 };
 

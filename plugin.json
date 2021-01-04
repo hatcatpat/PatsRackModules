@@ -1,7 +1,7 @@
 {
   "slug": "pat",
   "name": "pat",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "proprietary",
   "brand": "pat",
   "author": "",
@@ -46,6 +46,12 @@
     {
       "slug": "holdme",
       "name": "holdme",
+      "description": "",
+      "tags": []
+    },
+    {
+      "slug": "pete",
+      "name": "pete",
       "description": "",
       "tags": []
     }

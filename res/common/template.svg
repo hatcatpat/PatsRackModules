@@ -23,11 +23,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.8597152"
-     inkscape:cx="-61.163598"
-     inkscape:cy="88.425727"
+     inkscape:zoom="1.3301251"
+     inkscape:cx="89.934496"
+     inkscape:cy="94.609145"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="true"
      inkscape:snap-page="false"
@@ -130,11 +130,6 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';fill:#e8617a;fill-opacity:1;stroke-width:0.264583"
          id="path882" />
     </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="components">
     <circle
        style="fill:#00ff00;stroke-width:0.4895"
        id="path2113"
@@ -148,4 +143,8 @@
        cy="23.60887"
        r="5.5384998" />
   </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="components" />
 </svg>

@@ -13,5 +13,6 @@ extern Model* modelPolyamory;
 extern Model* modelSnap;
 extern Model* modelTimothy;
 extern Model* modelHoldme;
+extern Model* modelPete;
 // Declare each Model, defined in each module source file
 // extern Model* modelMyModule;

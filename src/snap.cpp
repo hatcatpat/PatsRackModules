@@ -45,6 +45,14 @@ struct Snap : Module
 		configParam(GATE_PARAM, 0.f, 1.f, 0.f, "Triggers a 'snap'");
 	}
 
+	float getBPS()
+	{
+		if (inputs[BPM_INPUT].isConnected())
+			return 60.f / rescale(abs(inputs[BPM_INPUT].getVoltage()), 0.f, 10.f, 1.f, 120.f * 16.f);
+		else
+			return 60.f / params[BPM_PARAM].getValue();
+	}
+
 	void process(const ProcessArgs &args) override
 	{
 		bool gate = false;
@@ -66,7 +74,7 @@ struct Snap : Module
 
 		if (active)
 		{
-			float dur = 60.f / (params[BPM_PARAM].getValue() * abs(inputs[BPM_INPUT].getNormalVoltage(10.f)) / 10.f);
+			float dur = getBPS();
 			dur *= params[DUR_PARAM].getValue() * abs(inputs[DUR_INPUT].getNormalVoltage(10.f)) / 10.f;
 			dur /= div;
 
