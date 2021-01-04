@@ -16,7 +16,7 @@ for mac:
   - run "make clean"
   - either:
     - run "make dist" to compile it to a zip/folder, then put *contents* of the newly created dist/pat-VERSION-mac.zip into your plugins-v1 folder (Documents/Rack/plugins-v1)
-    - or, run "make install" to automatically put the plugin the your plugins folder
+    - or, run "make install" to automatically put the plugin in your plugins folder
 
 ## modules
 
