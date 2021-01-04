@@ -6,6 +6,18 @@ a set of modules i have created for vcv rack :^)
 for windows:
   place the *contents* of dist/pat-VERSION-win.zip into your plugins-v1 folder (located in Documents/Rack/plugins-v1)
 
+for linux:
+  place the *contents* of dist/pat-VERSION-lin.zip into your plugins-v1 folder (perhaps located in /home/NAME/.Rack/plugins-v1)
+  
+for mac:
+  read [this guide](https://vcvrack.com/manual/PluginDevelopmentTutorial) to figure out how to set up a build environment for plugins, then in a command line: 
+  - clone this repo
+  - move into the folder
+  - run "make clean"
+  - either:
+    - run "make dist" to compile it to a zip/folder, then put *contents* of the newly created dist/pat-VERSION-mac.zip into your plugins-v1 folder (Documents/Rack/plugins-v1)
+    - or, run "make install" to automatically put the plugin the your plugins folder
+
 ## modules
 
 ### chance
@@ -28,3 +40,9 @@ a sample-hold and/or range-mapper. it takes an input signal, and an input range 
 
 ### polyamory
 takes 4 inputs (or more, if you put a poly cable into input a), and distrubutes them evenly over the range [0,1]. it then adjusts the volume of each input according to its distance to the center and width, and outputs the sum. the mul parameter allows for additional volume control.
+
+### timothy
+a clock. has outputs for 1,2,4,8, and 16 beats. also has a speed multiplier toggle, so you can multiply the speed by either 1/4, 1/2, 2 or 4. the bpm has a cv output as well, so you can sync up other clocks?
+
+### snap
+a perhaps useless clock subdivider. takes a bpm and a number of beats, and divides the duration by the "div". i.e, if you had 120 bpm, with 4 beats, and a div of 3, it would trigger 3 times over the next 4 beats.
